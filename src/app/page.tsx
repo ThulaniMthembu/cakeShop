@@ -165,7 +165,7 @@ export default function CakeBakerLanding() {
 		<div
 			className={`flex flex-col min-h-screen transition-opacity duration-1000 ease-in-out ${
 				isLoaded ? 'opacity-100' : 'opacity-0'
-			} bg-[#8B4513]`}
+			} bg-[#432818]`}
 		>
 			{fullScreenImage && (
 				<FullScreenImage
@@ -178,7 +178,7 @@ export default function CakeBakerLanding() {
 					visible ? 'translate-y-0' : '-translate-y-full'
 				}`}
 			>
-				<div className='px-4 lg:px-6 h-20 flex items-center bg-[#8B4513]'>
+				<div className='px-4 lg:px-6 h-20 flex items-center bg-[#432818]'>
 					<Link className='flex items-center justify-center' href='#'>
 						<Image
 							src='/images/logo.jpg'
