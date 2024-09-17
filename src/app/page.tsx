@@ -107,6 +107,12 @@ export default function CakeBakerLanding() {
 		<>
 			<Link
 				className='text-md font-medium hover:underline underline-offset-4 text-[#FFD700]'
+				href='#about'
+			>
+				About
+			</Link>
+			<Link
+				className='text-md font-medium hover:underline underline-offset-4 text-[#FFD700]'
 				href='#services'
 			>
 				Services
@@ -228,6 +234,26 @@ export default function CakeBakerLanding() {
 						</div>
 					</div>
 				</section>
+
+				<section id='about'className='w-full py-12 md:py-24 lg:py-32 bg-[#FFF5E6]'>
+					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
+						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#8B4513]'>
+							About Us
+						</h2>
+						<p className='fade-in text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
+							Founded in 2020, Amazin&apos; Glazin&apos; Cakes is a proudly South African cake shop operating in Johannesburg and Thohoyandou, Venda. Our passion is crafting extraordinary cakes for all occasions, from birthdays and weddings to special events. Each cake is meticulously designed and baked with the finest ingredients, ensuring both taste and elegance are second to none.
+						</p><br />
+
+						<p className='fade-in text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
+							Whether you&apos;re dreaming of a classic design or something more unique, our skilled bakers and decorators are here to turn your vision into a delicious reality. At Amazin&apos; Glazin&apos; Cakes, we believe that every celebration deserves a show-stopping cake.
+						</p><br />
+
+						<p className='fade-in text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
+							Let us make your next occasion unforgettable with a masterpiece that&apos;s as delightful to the eyes as it is to the palate.
+						</p>
+					</div>
+				</section>
+
 				<section
 					id='services'
 					className='w-full py-12 md:py-24 lg:py-32 bg-[#FFD700]'
