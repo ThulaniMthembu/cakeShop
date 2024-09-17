@@ -156,7 +156,7 @@ export default function CakeBakerLanding() {
 		<div
 			className={`flex flex-col min-h-screen transition-opacity duration-1000 ease-in-out ${
 				isLoaded ? 'opacity-100' : 'opacity-0'
-			} bg-[#FFF5E6]`}
+			} bg-[#FFA500]`}
 		>
 			{fullScreenImage && (
 				<FullScreenImage
@@ -294,7 +294,7 @@ export default function CakeBakerLanding() {
 					</div>
 				</section>
 
-			  <section
+				<section
 					id='gallery'
 					className='w-full py-12 md:py-24 lg:py-32 bg-[#FFF5E6]'
 				>
@@ -335,17 +335,17 @@ export default function CakeBakerLanding() {
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
 							<div className='fade-in bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
 								<p className='text-[#8B4513] mb-4'>
-									&quot;The cake was not only beautiful but also delicious! It
-									was the highlight of our wedding reception.&quot;
+									&quot;I absolutely love your cakes! They are not only beautiful but taste amazing too. Every bite is pure joy! 
+									Can I book in again lol? &quot;
 								</p>
-								<p className='font-bold text-[#8B4513]'>- Sarah &amp; John</p>
+								<p className='font-bold text-[#8B4513]'>- Chanell on Instagram</p>
 							</div>
 							<div className='fade-in bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
 								<p className='text-[#8B4513] mb-4'>
 									&quot;I&apos;ve ordered multiple birthday cakes, and they
 									always exceed my expectations. Highly recommended!&quot;
 								</p>
-								<p className='font-bold text-[#8B4513]'>- Michael T.</p>
+								<p className='font-bold text-[#8B4513]'>- Nangi on Facebook</p>
 							</div>
 							<div className='fade-in bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
 								<p className='text-[#8B4513] mb-4'>
@@ -353,7 +353,7 @@ export default function CakeBakerLanding() {
 									cake was absolutely perfect. Amazin&apos; Glazin&apos; Cakes
 									brought her dreams to life!&quot;
 								</p>
-								<p className='font-bold text-[#8B4513]'>- Emily R.</p>
+								<p className='font-bold text-[#8B4513]'>- Mukwevho on Facebook</p>
 							</div>
 							<div className='fade-in bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
 								<p className='text-[#8B4513] mb-4'>
@@ -362,7 +362,7 @@ export default function CakeBakerLanding() {
 									Professional service and exquisite taste!&quot;
 								</p>
 								<p className='font-bold text-[#8B4513]'>
-									- David L., Event Planner
+									- Palesa, an Event Planner
 								</p>
 							</div>
 						</div>
