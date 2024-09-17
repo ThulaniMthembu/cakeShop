@@ -425,7 +425,21 @@ export default function CakeBakerLanding() {
 										className='w-full h-full rounded-lg'
 									></iframe>
 								</div>
+								<div className='aspect-w-16 aspect-h-9 mb-4'>
+									<iframe
+										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235182.3881794668!2d30.325731868485008!3d-22.923518717512486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec5c72c7472097b%3A0xd5d5f24ad8f27122!2sThohoyandou!5e0!3m2!1sen!2sza!4v1726607247580!5m2!1sen!2sza"
+										width='600'
+										height='450'
+										style={{ border: 0 }}
+										allowFullScreen={false}
+										loading='lazy'
+										referrerPolicy='no-referrer-when-downgrade'
+										title="Amazin' Glazin' Cakes Location"
+										className='w-full h-full rounded-lg'
+									></iframe>
+								</div>
 							</div>
+							
 						</div>
 					</div>
 				</section>
