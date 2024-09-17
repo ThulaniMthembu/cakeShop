@@ -104,6 +104,10 @@ export default function CakeBakerLanding() {
 		};
 	}, [prevScrollPos]);
 
+	interface NavLinksProps {
+		onClick: () => void;
+	}
+
 	const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => (
 		<>
 			<Link
@@ -136,10 +140,6 @@ export default function CakeBakerLanding() {
 			</Link>
 		</>
 	);
-
-	interface NavLinksProps {
-		onClick: () => void;
-	}
 
 	const galleryImages: ImageData[] = [
 		{
@@ -445,7 +445,7 @@ export default function CakeBakerLanding() {
 							<div className='fade-in flex flex-col h-full'>
 								<div className='flex-1 flex flex-col'>
 									<h4 className='text-xl font-semibold mb-2 text-white-800'>
-										Johannesburg Location
+										Johannesburg & Soweto 
 									</h4>
 									<div className='flex-grow'>
 										<iframe
@@ -461,7 +461,7 @@ export default function CakeBakerLanding() {
 								</div>
 								<div className='flex-1 flex flex-col mt-4'>
 									<h4 className='text-xl font-semibold mb-2 text-white-800'>
-										Thohoyandou Location
+										Thohoyandou, Venda 
 									</h4>
 									<div className='flex-grow'>
 										<iframe
@@ -511,7 +511,8 @@ export default function CakeBakerLanding() {
 							<div className='flex items-center text-sm text-[#FFA500] mb-1'>
 								<PhoneIcon className='h-4 w-4 mr-2 flex-shrink-0' />
 								<span>
-									Mulalo: (27) 79-390-1667 | Cecilia: (27) 79-120-1122
+									Mulalo: (27) 79-390-1667 <br />
+									Cecilia: (27) 79-120-1122
 								</span>
 							</div>
 							<div className='flex items-center text-sm text-[#FFA500]'>
@@ -525,6 +526,12 @@ export default function CakeBakerLanding() {
 								Quick Links
 							</h3>
 							<nav className='flex flex-col space-y-1'>
+							<Link
+									className='text-sm text-[#FFA500] hover:underline'
+									href='#about'
+								>
+									About
+								</Link>
 								<Link
 									className='text-sm text-[#FFA500] hover:underline'
 									href='#services'
@@ -575,7 +582,7 @@ export default function CakeBakerLanding() {
 
 					<div className='mt-6 pt-6 border-t border-[#FFA500]'>
 						<p className='text-sm text-[#FFA500] text-center'>
-							© 2024 Amazin&apos; Glazin&apos; Cakes. All rights reserved.
+							© 2020 Amazin&apos; Glazin&apos; Cakes. All rights reserved.
 						</p>
 					</div>
 				</div>
