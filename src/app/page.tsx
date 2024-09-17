@@ -62,7 +62,6 @@ export default function CakeBakerLanding() {
 	const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 	const closeMenu = () => setIsMenuOpen(false);
 
-
 	useEffect(() => {
 		setIsLoaded(true);
 		const observerOptions = {
@@ -193,8 +192,8 @@ export default function CakeBakerLanding() {
 						</span>
 					</Link>
 					<nav className='ml-auto hidden md:flex gap-4 sm:gap-6'>
-  <NavLinks onClick={() => {}} />
-</nav>
+						<NavLinks onClick={() => {}} />
+					</nav>
 					<Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
 						<SheetTrigger asChild>
 							<Button
@@ -208,10 +207,10 @@ export default function CakeBakerLanding() {
 							</Button>
 						</SheetTrigger>
 						<SheetContent side='right' className='bg-[#8B4513]'>
-  <nav className='flex flex-col gap-4'>
-    <NavLinks onClick={closeMenu} />
-  </nav>
-</SheetContent>
+							<nav className='flex flex-col gap-4'>
+								<NavLinks onClick={closeMenu} />
+							</nav>
+						</SheetContent>
 					</Sheet>
 				</div>
 			</header>
@@ -233,8 +232,8 @@ export default function CakeBakerLanding() {
 									Delicious Cakes for Your Special Moments
 								</h1>
 								<p className='fade-in mx-auto max-w-[700px] text-[#FFFFFF] md:text-xl'>
-									Handcrafted cakes for birthdays, weddings, and events. Made with love
-									and the finest ingredients.
+									Handcrafted cakes for birthdays, weddings, and events. Made
+									with love and the finest ingredients.
 								</p>
 							</div>
 							<div className='fade-in'>
@@ -253,22 +252,36 @@ export default function CakeBakerLanding() {
 					</div>
 				</section>
 
-
-				<section id='about'className='w-full py-12 md:py-24 lg:py-32 bg-[#FFF5E6]'>
+				<section
+					id='about'
+					className='w-full py-12 md:py-24 lg:py-32 bg-[#FFF5E6]'
+				>
 					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
 						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#8B4513]'>
 							About Us
 						</h2>
 						<p className='fade-in text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
-							Founded in 2020, Amazin&apos; Glazin&apos; Cakes is a proudly South African cake shop operating in Johannesburg and Thohoyandou, Venda. Our passion is crafting extraordinary cakes for all occasions, from birthdays and weddings to special events. Each cake is meticulously designed and baked with the finest ingredients, ensuring both taste and elegance are second to none.
-						</p><br />
+							Founded in 2020, Amazin&apos; Glazin&apos; Cakes is a proudly
+							South African cake shop operating in Johannesburg and Thohoyandou,
+							Venda. Our passion is crafting extraordinary cakes for all
+							occasions, from birthdays and weddings to special events. Each
+							cake is meticulously designed and baked with the finest
+							ingredients, ensuring both taste and elegance are second to none.
+						</p>
+						<br />
 
 						<p className='fade-in text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
-							Whether you&apos;re dreaming of a classic design or something more unique, our skilled bakers and decorators are here to turn your vision into a delicious reality. At Amazin&apos; Glazin&apos; Cakes, we believe that every celebration deserves a show-stopping cake.
-						</p><br />
+							Whether you&apos;re dreaming of a classic design or something more
+							unique, our skilled bakers and decorators are here to turn your
+							vision into a delicious reality. At Amazin&apos; Glazin&apos;
+							Cakes, we believe that every celebration deserves a show-stopping
+							cake.
+						</p>
+						<br />
 
 						<p className='fade-in text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
-							Let us make your next occasion unforgettable with a masterpiece that&apos;s as delightful to the eyes as it is to the palate.
+							Let us make your next occasion unforgettable with a masterpiece
+							that&apos;s as delightful to the eyes as it is to the palate.
 						</p>
 					</div>
 				</section>
@@ -354,10 +367,13 @@ export default function CakeBakerLanding() {
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
 							<div className='fade-in bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
 								<p className='text-[#8B4513] mb-4'>
-									&quot;I absolutely love your cakes! They are not only beautiful but taste amazing too. Every bite is pure joy! 
-									Can I book in again lol? &quot;
+									&quot;I absolutely love your cakes! They are not only
+									beautiful but taste amazing too. Every bite is pure joy! Can I
+									book in again lol? &quot;
 								</p>
-								<p className='font-bold text-[#8B4513]'>- Chanell on Instagram</p>
+								<p className='font-bold text-[#8B4513]'>
+									- Chanell on Instagram
+								</p>
 							</div>
 							<div className='fade-in bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
 								<p className='text-[#8B4513] mb-4'>
@@ -372,7 +388,9 @@ export default function CakeBakerLanding() {
 									cake was absolutely perfect. Amazin&apos; Glazin&apos; Cakes
 									brought her dreams to life!&quot;
 								</p>
-								<p className='font-bold text-[#8B4513]'>- Mukwevho on Facebook</p>
+								<p className='font-bold text-[#8B4513]'>
+									- Mukwevho on Facebook
+								</p>
 							</div>
 							<div className='fade-in bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
 								<p className='text-[#8B4513] mb-4'>
@@ -387,7 +405,7 @@ export default function CakeBakerLanding() {
 						</div>
 					</div>
 				</section>
-        
+
 				<section
 					id='contact'
 					className='w-full py-12 md:py-24 lg:py-32 bg-[#FFA500]'
@@ -397,59 +415,67 @@ export default function CakeBakerLanding() {
 							Contact Us
 						</h2>
 						<div className='grid md:grid-cols-2 gap-8'>
-							<div className='fade-in'>
-								<form className='space-y-4'>
-									<Input
-										placeholder='Your Name'
-										className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513]'
-									/>
-									<Input
-										type='email'
-										placeholder='Your Email'
-										className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513]'
-									/>
-									<Input
-										placeholder='Phone Number'
-										className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513]'
-									/>
-									<Textarea
-										placeholder='Tell us about your cake requirements'
-										className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513]'
-									/>
-									<Button className='w-full bg-[#8B4513] text-[#FFD700] hover:bg-[#A0522D]'>
+							<div className='fade-in flex'>
+								<form className='space-y-4 p-6 border-2 border-[#8B4513] rounded-lg bg-[#FFD700] bg-opacity-30 flex flex-col justify-between w-full'>
+									<div className='space-y-4 flex-grow'>
+										<Input
+											placeholder='Your Name'
+											className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513] border-[#8B4513]'
+										/>
+										<Input
+											type='email'
+											placeholder='Your Email'
+											className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513] border-[#8B4513]'
+										/>
+										<Input
+											placeholder='Phone Number'
+											className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513] border-[#8B4513]'
+										/>
+										<Textarea
+											placeholder='Tell us about your cake requirements'
+											className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513] border-[#8B4513] flex-grow'
+											rows={10}
+										/>
+									</div>
+									<Button className='w-full bg-[#8B4513] text-[#FFD700] hover:bg-[#A0522D] transition-colors duration-300 mt-4'>
 										Send Message
 									</Button>
 								</form>
 							</div>
-							<div className='fade-in'>
-								<div className='aspect-w-16 aspect-h-9 mb-4'>
-									<iframe
-										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28632.90625550841!2d27.823469911883905!3d-26.225508483803317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a15d7cf11131%3A0x719a6f632dd70f77!2sDobsonville%2C%20Soweto%2C%201863!5e0!3m2!1sen!2sza!4v1726606726769!5m2!1sen!2sza"
-										width='600'
-										height='450'
-										style={{ border: 0 }}
-										allowFullScreen={false}
-										loading='lazy'
-										referrerPolicy='no-referrer-when-downgrade'
-										title="Amazin' Glazin' Cakes Location"
-										className='w-full h-full rounded-lg'
-									></iframe>
+							<div className='fade-in flex flex-col h-full'>
+								<div className='flex-1 flex flex-col'>
+									<h4 className='text-xl font-semibold mb-2 text-[#8B4513]'>
+										We are in Johannesburg
+									</h4>
+									<div className='flex-grow'>
+										<iframe
+											src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28632.90625550841!2d27.823469911883905!3d-26.225508483803317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a15d7cf11131%3A0x719a6f632dd70f77!2sDobsonville%2C%20Soweto%2C%201863!5e0!3m2!1sen!2sza!4v1726606726769!5m2!1sen!2sza'
+											style={{ border: 0 }}
+											allowFullScreen={false}
+											loading='lazy'
+											referrerPolicy='no-referrer-when-downgrade'
+											title="Amazin' Glazin' Cakes Johannesburg Location"
+											className='w-full h-full rounded-lg shadow-lg'
+										></iframe>
+									</div>
 								</div>
-								<div className='aspect-w-16 aspect-h-9 mb-4'>
-									<iframe
-										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235182.3881794668!2d30.325731868485008!3d-22.923518717512486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec5c72c7472097b%3A0xd5d5f24ad8f27122!2sThohoyandou!5e0!3m2!1sen!2sza!4v1726607247580!5m2!1sen!2sza"
-										width='600'
-										height='450'
-										style={{ border: 0 }}
-										allowFullScreen={false}
-										loading='lazy'
-										referrerPolicy='no-referrer-when-downgrade'
-										title="Amazin' Glazin' Cakes Location"
-										className='w-full h-full rounded-lg'
-									></iframe>
+								<div className='flex-1 flex flex-col mt-4'>
+									<h4 className='text-xl font-semibold mb-2 text-[#8B4513]'>
+										And are also in Thohoyandou 
+									</h4>
+									<div className='flex-grow'>
+										<iframe
+											src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235182.3881794668!2d30.325731868485008!3d-22.923518717512486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec5c72c7472097b%3A0xd5d5f24ad8f27122!2sThohoyandou!5e0!3m2!1sen!2sza!4v1726607247580!5m2!1sen!2sza'
+											style={{ border: 0 }}
+											allowFullScreen={false}
+											loading='lazy'
+											referrerPolicy='no-referrer-when-downgrade'
+											title="Amazin' Glazin' Cakes Thohoyandou Location"
+											className='w-full h-full rounded-lg shadow-lg'
+										></iframe>
+									</div>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
