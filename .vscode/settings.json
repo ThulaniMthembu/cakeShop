@@ -1,0 +1,20 @@
+{
+  "cSpell.words": [
+    "Amazin",
+    "clsx",
+    "dotfiles",
+    "Glazin",
+    "lucide",
+    "Mulalo",
+    "nojekyll",
+    "predeploy",
+    "tailwindcss",
+    "Thohoyandou",
+    "unoptimized",
+    "Venda"
+  ],
+  "javascript.format.semicolons": "insert",
+  "typescript.format.semicolons": "insert",
+  "typescript.tsserver.enableTracing": true,
+  "editor.formatOnSave": true
+}
