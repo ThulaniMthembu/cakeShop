@@ -156,7 +156,7 @@ export default function CakeBakerLanding() {
 		<div
 			className={`flex flex-col min-h-screen transition-opacity duration-1000 ease-in-out ${
 				isLoaded ? 'opacity-100' : 'opacity-0'
-			} bg-[#FFA500]`}
+			} bg-[#8B4513]`}
 		>
 			{fullScreenImage && (
 				<FullScreenImage
@@ -207,16 +207,24 @@ export default function CakeBakerLanding() {
 			</header>
 
 			<main className='flex-1 pt-20'>
-				<section className='w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-[#FFA500]'>
-					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
+				<section
+					className='relative w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-cover bg-center'
+					style={{
+						backgroundImage: `url('/images/background.jpg')`,
+					}}
+				>
+					{/* Overlay */}
+					<div className='absolute inset-0 bg-black bg-opacity-40'></div>
+
+					<div className='relative container px-4 md:px-6 max-w-6xl mx-auto'>
 						<div className='flex flex-col items-center space-y-4 text-center'>
 							<div className='space-y-2'>
-								<h1 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-[#8B4513]'>
+								<h1 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-[#FFFFFF]'>
 									Delicious Cakes for Your Special Moments
 								</h1>
-								<p className='fade-in mx-auto max-w-[700px] text-[#8B4513] md:text-xl'>
-									Handcrafted cakes for birthdays, weddings, and events. Made
-									with love and the finest ingredients.
+								<p className='fade-in mx-auto max-w-[700px] text-[#FFFFFF] md:text-xl'>
+									Handcrafted cakes for birthdays, weddings, and events. Made with love
+									and the finest ingredients.
 								</p>
 							</div>
 							<div className='fade-in'>
@@ -234,6 +242,7 @@ export default function CakeBakerLanding() {
 						</div>
 					</div>
 				</section>
+
 
 				<section id='about'className='w-full py-12 md:py-24 lg:py-32 bg-[#FFF5E6]'>
 					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
@@ -256,7 +265,7 @@ export default function CakeBakerLanding() {
 
 				<section
 					id='services'
-					className='w-full py-12 md:py-24 lg:py-32 bg-[#FFD700]'
+					className='w-full py-12 md:py-24 lg:py-32 bg-[#FFE6a7]'
 				>
 					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
 						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#8B4513]'>
@@ -296,10 +305,10 @@ export default function CakeBakerLanding() {
 
 				<section
 					id='gallery'
-					className='w-full py-12 md:py-24 lg:py-32 bg-[#FFF5E6]'
+					className='w-full py-12 md:py-24 lg:py-32 bg-[#BB9457]'
 				>
 					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
-						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#8B4513]'>
+						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#000000]'>
 							Cake Gallery
 						</h2>
 						<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
@@ -327,9 +336,9 @@ export default function CakeBakerLanding() {
 					</div>
 				</section>
 
-				<section className='w-full py-12 md:py-24 lg:py-32 bg-[#FFA500]'>
+				<section className='w-full py-12 md:py-24 lg:py-32 bg-[#8B4513]'>
 					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
-						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#8B4513]'>
+						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#FFFFFF]'>
 							What Our Customers Say
 						</h2>
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -422,7 +431,7 @@ export default function CakeBakerLanding() {
 				</section>
 			</main>
 
-			<footer className='w-full py-6 px-4 md:px-6 bg-[#8B4513]'>
+			<footer className='w-full py-6 px-4 md:px-6 bg-[#432818]'>
 				<div className='container mx-auto max-w-6xl'>
 					<div className='flex flex-col md:flex-row md:items-start md:justify-between space-y-6 md:space-y-0 md:space-x-4'>
 						<div className='flex flex-col items-start'>
