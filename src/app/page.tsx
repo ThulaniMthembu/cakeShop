@@ -136,7 +136,7 @@ export default function CakeBakerLanding() {
 			alt: 'Wedding Cake',
 		},
 		{ src: '/images/biscuits.jpg?height=300&width=300', alt: 'Biscuits' },
-		{ src: '/images/holder.jpg?height=300&width=300', alt: 'Cupcakes' },
+		{ src: '/images/cupcakes.jpg?height=300&width=300', alt: 'Cupcakes' },
 		{ src: '/images/themed-cake.jpg?height=300&width=300', alt: 'Themed Cake' },
 		{ src: '/images/scones.jpg?height=300&width=300', alt: 'Scones' },
 		{
