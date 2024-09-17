@@ -408,44 +408,44 @@ export default function CakeBakerLanding() {
 
 				<section
 					id='contact'
-					className='w-full py-12 md:py-24 lg:py-32 bg-[#FFA500]'
+					className='w-full py-12 md:py-24 lg:py-32 bg-[#BC6C25]'
 				>
 					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
-						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#8B4513]'>
+						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-white-800'>
 							Contact Us
 						</h2>
 						<div className='grid md:grid-cols-2 gap-8'>
 							<div className='fade-in flex'>
-								<form className='space-y-4 p-6 border-2 border-[#8B4513] rounded-lg bg-[#FFD700] bg-opacity-30 flex flex-col justify-between w-full'>
+								<form className='space-y-6 p-8 bg-[#283618] rounded-lg shadow-lg flex flex-col justify-between w-full border-0'>
 									<div className='space-y-4 flex-grow'>
 										<Input
 											placeholder='Your Name'
-											className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513] border-[#8B4513]'
+											className='bg-amber-50 text-amber-800 placeholder-amber-400 border-amber-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition duration-300'
 										/>
 										<Input
 											type='email'
 											placeholder='Your Email'
-											className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513] border-[#8B4513]'
+											className='bg-amber-50 text-amber-800 placeholder-amber-400 border-amber-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition duration-300'
 										/>
 										<Input
 											placeholder='Phone Number'
-											className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513] border-[#8B4513]'
+											className='bg-amber-50 text-amber-800 placeholder-amber-400 border-amber-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition duration-300'
 										/>
 										<Textarea
 											placeholder='Tell us about your cake requirements'
-											className='bg-[#FFD700] text-[#8B4513] placeholder-[#8B4513] border-[#8B4513] flex-grow'
+											className='bg-amber-50 text-amber-800 placeholder-amber-400 border-amber-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition duration-300 resize-none'
 											rows={10}
 										/>
 									</div>
-									<Button className='w-full bg-[#8B4513] text-[#FFD700] hover:bg-[#A0522D] transition-colors duration-300 mt-4'>
+									<Button className='w-full bg-amber-600 text-white hover:bg-amber-700 focus:ring-4 focus:ring-amber-300 transition duration-300 shadow-md hover:shadow-lg'>
 										Send Message
 									</Button>
 								</form>
 							</div>
 							<div className='fade-in flex flex-col h-full'>
 								<div className='flex-1 flex flex-col'>
-									<h4 className='text-xl font-semibold mb-2 text-[#8B4513]'>
-										We are in Johannesburg
+									<h4 className='text-xl font-semibold mb-2 text-white-800'>
+										Johannesburg Location
 									</h4>
 									<div className='flex-grow'>
 										<iframe
@@ -460,8 +460,8 @@ export default function CakeBakerLanding() {
 									</div>
 								</div>
 								<div className='flex-1 flex flex-col mt-4'>
-									<h4 className='text-xl font-semibold mb-2 text-[#8B4513]'>
-										And are also in Thohoyandou 
+									<h4 className='text-xl font-semibold mb-2 text-white-800'>
+										Thohoyandou Location
 									</h4>
 									<div className='flex-grow'>
 										<iframe
