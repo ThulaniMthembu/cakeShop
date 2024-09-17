@@ -60,6 +60,8 @@ export default function CakeBakerLanding() {
 	const [visible, setVisible] = useState(true);
 
 	const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+	const closeMenu = () => setIsMenuOpen(false);
+
 
 	useEffect(() => {
 		setIsLoaded(true);
@@ -103,34 +105,42 @@ export default function CakeBakerLanding() {
 		};
 	}, [prevScrollPos]);
 
-	const NavLinks = () => (
+	const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => (
 		<>
 			<Link
 				className='text-md font-medium hover:underline underline-offset-4 text-[#FFD700]'
 				href='#about'
+				onClick={onClick}
 			>
 				About
 			</Link>
 			<Link
 				className='text-md font-medium hover:underline underline-offset-4 text-[#FFD700]'
 				href='#services'
+				onClick={onClick}
 			>
 				Services
 			</Link>
 			<Link
 				className='text-md font-medium hover:underline underline-offset-4 text-[#FFD700]'
 				href='#gallery'
+				onClick={onClick}
 			>
 				Gallery
 			</Link>
 			<Link
 				className='text-md font-medium hover:underline underline-offset-4 text-[#FFD700]'
 				href='#contact'
+				onClick={onClick}
 			>
 				Contact
 			</Link>
 		</>
 	);
+
+	interface NavLinksProps {
+		onClick: () => void;
+	}
 
 	const galleryImages: ImageData[] = [
 		{
@@ -183,8 +193,8 @@ export default function CakeBakerLanding() {
 						</span>
 					</Link>
 					<nav className='ml-auto hidden md:flex gap-4 sm:gap-6'>
-						<NavLinks />
-					</nav>
+  <NavLinks onClick={() => {}} />
+</nav>
 					<Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
 						<SheetTrigger asChild>
 							<Button
@@ -198,10 +208,10 @@ export default function CakeBakerLanding() {
 							</Button>
 						</SheetTrigger>
 						<SheetContent side='right' className='bg-[#8B4513]'>
-							<nav className='flex flex-col gap-4'>
-								<NavLinks />
-							</nav>
-						</SheetContent>
+  <nav className='flex flex-col gap-4'>
+    <NavLinks onClick={closeMenu} />
+  </nav>
+</SheetContent>
 					</Sheet>
 				</div>
 			</header>
