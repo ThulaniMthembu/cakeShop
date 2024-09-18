@@ -196,7 +196,7 @@ export default function CakeBakerLanding() {
 		{ src: '/images/scones.jpg?height=300&width=300', alt: 'Scones' },
 		{
 			src: '/images/slices.jpg?height=300&width=300',
-			alt: 'Cake Slices: 3 for R100',
+			alt: 'Monthly Specials',
 		},
 		{ src: '/images/more.jpg?height=300&width=300', alt: 'And More' },
 	];
