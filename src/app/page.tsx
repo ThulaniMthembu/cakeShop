@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import ContactForm from '@/components/ui/contact-form'
+import ContactForm from '@/components/ui/contact-form';
 import {
 	HeartIcon,
 	PartyPopperIcon,
@@ -499,9 +499,9 @@ export default function CakeBakerLanding() {
 							Contact Us
 						</h2>
 						<div className='grid md:grid-cols-2 gap-8'>
-						<div className='flex'>
-              <ContactForm />
-            </div>
+							<div className='flex'>
+								<ContactForm />
+							</div>
 							<div className='flex flex-col h-full'>
 								<div className='flex-1 flex flex-col'>
 									<h4 className='text-xl font-semibold mb-2 text-white-800'>
@@ -577,7 +577,7 @@ export default function CakeBakerLanding() {
 							</div>
 							<div className='flex items-center text-sm text-[#FFA500]'>
 								<MailIcon className='h-4 w-4 mr-2 flex-shrink-0' />
-								<span>amazin&apos;glazingcakeshomeoffreshbakes@gmail.com</span>
+								<span>amazinglazincakes110@gmail.com</span>
 							</div>
 						</div>
 
@@ -647,6 +647,16 @@ export default function CakeBakerLanding() {
 					<div className='mt-6 pt-6 border-t border-[#FFA500]'>
 						<p className='text-sm text-[#FFA500] text-center'>
 							© 2020 Amazin&apos; Glazin&apos; Cakes. All rights reserved.
+						</p>
+						<p className='text-sm text-[#FFA500] text-center'>
+							Website by{' '}
+							<a
+								href='mailto:thulanim457@gmail.com'
+								className='text-[#ffffff] hover:underline'
+								onClick={(e) => e.stopPropagation()}
+							>
+								Thulani Mthembu | thulanim457@gmail.com
+							</a>
 						</p>
 					</div>
 				</div>
