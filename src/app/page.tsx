@@ -2,9 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import ContactForm from '@/components/contact-form'
 import {
 	HeartIcon,
 	PartyPopperIcon,
@@ -500,33 +499,9 @@ export default function CakeBakerLanding() {
 							Contact Us
 						</h2>
 						<div className='grid md:grid-cols-2 gap-8'>
-							<div className='flex'>
-								<form className='space-y-6 p-8 bg-[#283618] rounded-lg shadow-lg flex flex-col justify-between w-full border-0'>
-									<div className='space-y-4 flex-grow'>
-										<Input
-											placeholder='Your Name'
-											className='bg-amber-50 text-amber-800 placeholder-amber-400 border-amber-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition duration-300'
-										/>
-										<Input
-											type='email'
-											placeholder='Your Email'
-											className='bg-amber-50 text-amber-800 placeholder-amber-400 border-amber-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition duration-300'
-										/>
-										<Input
-											placeholder='Phone Number'
-											className='bg-amber-50 text-amber-800 placeholder-amber-400 border-amber-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition duration-300'
-										/>
-										<Textarea
-											placeholder='Tell us about your cake requirements'
-											className='bg-amber-50 text-amber-800 placeholder-amber-400 border-amber-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition duration-300 resize-none'
-											rows={10}
-										/>
-									</div>
-									<Button className='w-full bg-amber-600 text-white hover:bg-amber-700 focus:ring-4 focus:ring-amber-300 transition duration-300 shadow-md hover:shadow-lg'>
-										Send Message
-									</Button>
-								</form>
-							</div>
+						<div className='flex'>
+              <ContactForm />
+            </div>
 							<div className='flex flex-col h-full'>
 								<div className='flex-1 flex flex-col'>
 									<h4 className='text-xl font-semibold mb-2 text-white-800'>
