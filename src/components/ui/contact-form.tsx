@@ -50,10 +50,10 @@ export default function ContactForm() {
 
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_6z0f8ph',
+        'template_xbj7l3o',
         templateParams,
-        'YOUR_PUBLIC_KEY'
+        'TxaKxRzq0mrK23sKz'
       )
 
       toast({
