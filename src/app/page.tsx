@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import ContactForm from '@/components/contact-form'
+import ContactForm from '@/components/ui/contact-form'
 import {
 	HeartIcon,
 	PartyPopperIcon,
