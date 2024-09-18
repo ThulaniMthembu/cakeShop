@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -74,11 +74,13 @@ export default function CakeBakerLanding() {
 	const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 	const closeMenu = () => setIsMenuOpen(false);
 
+	const animatedElementsRef = useRef<HTMLElement[]>([]);
+
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setIsLoading(false);
 			setIsLoaded(true);
-		}, 2000); // Simulate loading for 2 seconds
+		}, 2000);
 
 		const handleLoad = () => {
 			setIsLoading(false);
@@ -96,7 +98,8 @@ export default function CakeBakerLanding() {
 		const observerCallback = (entries: IntersectionObserverEntry[]) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
-					entry.target.classList.add('animate-fadeIn');
+					entry.target.classList.add('animate-fadeInSlideUp');
+					observer.unobserve(entry.target);
 				}
 			});
 		};
@@ -106,9 +109,10 @@ export default function CakeBakerLanding() {
 			observerOptions
 		);
 
-		document.querySelectorAll('.fade-in').forEach((element) => {
-			observer.observe(element);
-		});
+		animatedElementsRef.current = Array.from(
+			document.querySelectorAll('.animate-on-scroll')
+		);
+		animatedElementsRef.current.forEach((el) => observer.observe(el));
 
 		const handleScroll = () => {
 			const currentScrollPos = window.pageYOffset;
@@ -124,8 +128,8 @@ export default function CakeBakerLanding() {
 		return () => {
 			clearTimeout(timer);
 			window.removeEventListener('load', handleLoad);
-			observer.disconnect();
 			window.removeEventListener('scroll', handleScroll);
+			observer.disconnect();
 		};
 	}, [prevScrollPos]);
 
@@ -232,7 +236,7 @@ export default function CakeBakerLanding() {
 							alt="Amazin' Glazin' Cakes Logo"
 							width={60}
 							height={60}
-							className='rounded-full'
+							className='rounded-full animate-on-scroll'
 						/>
 						<span className='font-bold text-[#FFD700] ml-2 text-xl'>
 							Amazin&apos; Glazin&apos; Cakes
@@ -274,15 +278,15 @@ export default function CakeBakerLanding() {
 					<div className='relative container px-4 md:px-6 max-w-6xl mx-auto'>
 						<div className='flex flex-col items-center space-y-4 text-center'>
 							<div className='space-y-2'>
-								<h1 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-[#FFFFFF]'>
+								<h1 className='animate-on-scroll text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-[#FFFFFF]'>
 									Delicious Cakes for Your Special Moments
 								</h1>
-								<p className='fade-in mx-auto max-w-[700px] text-[#FFFFFF] md:text-xl'>
+								<p className='animate-on-scroll mx-auto max-w-[700px] text-[#FFFFFF] md:text-xl'>
 									Handcrafted cakes for birthdays, weddings, and events. Made
 									with love and the finest ingredients.
 								</p>
 							</div>
-							<div className='fade-in'>
+							<div>
 								<Button
 									className='bg-[#8B4513] text-[#FFD700] hover:bg-[#A0522D]'
 									onClick={() =>
@@ -303,10 +307,10 @@ export default function CakeBakerLanding() {
 					className='w-full py-12 md:py-24 lg:py-32 bg-[#FFF5E6]'
 				>
 					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
-						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#8B4513]'>
+						<h2 className='animate-on-scroll text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#8B4513]'>
 							About Us
 						</h2>
-						<p className='fade-in text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
+						<p className='animate-on-scroll text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
 							Founded in 2020, Amazin&apos; Glazin&apos; Cakes is a proudly
 							South African cake shop operating in Johannesburg and Thohoyandou,
 							Venda. Our passion is crafting extraordinary cakes for all
@@ -316,7 +320,7 @@ export default function CakeBakerLanding() {
 						</p>
 						<br />
 
-						<p className='fade-in text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
+						<p className='animate-on-scroll text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
 							Whether you&apos;re dreaming of a classic design or something more
 							unique, our skilled bakers and decorators are here to turn your
 							vision into a delicious reality. At Amazin&apos; Glazin&apos;
@@ -325,7 +329,7 @@ export default function CakeBakerLanding() {
 						</p>
 						<br />
 
-						<p className='fade-in text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
+						<p className='animate-on-scroll text-start text-[#8B4513] max-w-3xl mx-auto md:text-lg'>
 							Let us make your next occasion unforgettable with a masterpiece
 							that&apos;s as delightful to the eyes as it is to the palate.
 						</p>
@@ -337,11 +341,11 @@ export default function CakeBakerLanding() {
 					className='w-full py-12 md:py-24 lg:py-32 bg-[#FFE6a7]'
 				>
 					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
-						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#8B4513]'>
+						<h2 className='animate-on-scroll text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#8B4513]'>
 							Our Services
 						</h2>
 						<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-							<div className='fade-in flex flex-col items-center text-center'>
+							<div className='flex flex-col items-center text-center'>
 								<PartyPopperIcon className='h-12 w-12 mb-4 text-[#8B4513]' />
 								<h3 className='text-xl font-bold mb-2 text-[#8B4513]'>
 									Birthday Cakes
@@ -350,7 +354,7 @@ export default function CakeBakerLanding() {
 									Custom cakes to make your birthday celebration unforgettable.
 								</p>
 							</div>
-							<div className='fade-in flex flex-col items-center text-center'>
+							<div className='flex flex-col items-center text-center'>
 								<HeartIcon className='h-12 w-12 mb-4 text-[#8B4513]' />
 								<h3 className='text-xl font-bold mb-2 text-[#8B4513]'>
 									Wedding Cakes
@@ -359,7 +363,7 @@ export default function CakeBakerLanding() {
 									Elegant and beautiful cakes for your perfect wedding day.
 								</p>
 							</div>
-							<div className='fade-in flex flex-col items-center text-center'>
+							<div className='flex flex-col items-center text-center'>
 								<CalendarIcon className='h-12 w-12 mb-4 text-[#8B4513]' />
 								<h3 className='text-xl font-bold mb-2 text-[#8B4513]'>
 									Event Cakes
@@ -377,14 +381,15 @@ export default function CakeBakerLanding() {
 					className='w-full py-12 md:py-24 lg:py-32 bg-[#BB9457]'
 				>
 					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
-						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#000000]'>
+						<h2 className='animate-on-scroll text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#000000]'>
 							Cake Gallery
 						</h2>
 						<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
 							{galleryImages.map((image, index) => (
 								<div
 									key={index}
-									className='fade-in relative overflow-hidden rounded-lg group aspect-[4/5]'
+									className='animate-on-scroll relative overflow-hidden rounded-lg group aspect-[4/5]'
+									style={{ animationDelay: `${index * 100}ms` }}
 								>
 									<Image
 										src={image.src}
@@ -403,7 +408,7 @@ export default function CakeBakerLanding() {
 							))}
 						</div>
 
-						<div className='mt-12 fade-in'>
+						<div className='mt-12'>
 							<div className='bg-[#8B4513] rounded-lg p-6 text-center'>
 								<h3 className='text-2xl font-bold text-[#FFD700] mb-4'>
 									See More Delicious Creations!
@@ -421,7 +426,7 @@ export default function CakeBakerLanding() {
 										rel='noopener noreferrer'
 									>
 										<FacebookIcon className='h-6 w-6 mr-2' />
-										<span>Follow on Facebook</span>
+										<span>Facebook</span>
 									</Link>
 									<Link
 										href='https://www.instagram.com/amazinglazincakess/'
@@ -431,7 +436,7 @@ export default function CakeBakerLanding() {
 										rel='noopener noreferrer'
 									>
 										<InstagramIcon className='h-6 w-6 mr-2' />
-										<span>Follow on Instagram</span>
+										<span>Instagram</span>
 									</Link>
 								</div>
 							</div>
@@ -441,11 +446,11 @@ export default function CakeBakerLanding() {
 
 				<section className='w-full py-12 md:py-24 lg:py-32 bg-[#8B4513]'>
 					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
-						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#FFFFFF]'>
+						<h2 className='animate-on-scroll text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-[#FFFFFF]'>
 							What Our Customers Say
 						</h2>
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-							<div className='fade-in bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
+							<div className='bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
 								<p className='text-[#8B4513] mb-4'>
 									&quot;I absolutely love your cakes! They are not only
 									beautiful but taste amazing too. Every bite is pure joy! Can I
@@ -455,14 +460,14 @@ export default function CakeBakerLanding() {
 									- Chanell on Instagram
 								</p>
 							</div>
-							<div className='fade-in bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
+							<div className='bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
 								<p className='text-[#8B4513] mb-4'>
 									&quot;I&apos;ve ordered multiple birthday cakes, and they
 									always exceed my expectations. Highly recommended!&quot;
 								</p>
 								<p className='font-bold text-[#8B4513]'>- Nangi on Facebook</p>
 							</div>
-							<div className='fade-in bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
+							<div className='bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
 								<p className='text-[#8B4513] mb-4'>
 									&quot;The custom design for my daughter&apos;s themed birthday
 									cake was absolutely perfect. Amazin&apos; Glazin&apos; Cakes
@@ -472,7 +477,7 @@ export default function CakeBakerLanding() {
 									- Mukwevho on Facebook
 								</p>
 							</div>
-							<div className='fade-in bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
+							<div className='bg-[#FFD700] p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
 								<p className='text-[#8B4513] mb-4'>
 									&quot;Our corporate event was a success, thanks in part to the
 									amazing dessert spread from Amazin&apos; Glazin&apos; Cakes.
@@ -491,11 +496,11 @@ export default function CakeBakerLanding() {
 					className='w-full py-12 md:py-24 lg:py-32 bg-[#BC6C25]'
 				>
 					<div className='container px-4 md:px-6 max-w-6xl mx-auto'>
-						<h2 className='fade-in text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-white-800'>
+						<h2 className='animate-on-scroll text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8 text-white-800'>
 							Contact Us
 						</h2>
 						<div className='grid md:grid-cols-2 gap-8'>
-							<div className='fade-in flex'>
+							<div className='flex'>
 								<form className='space-y-6 p-8 bg-[#283618] rounded-lg shadow-lg flex flex-col justify-between w-full border-0'>
 									<div className='space-y-4 flex-grow'>
 										<Input
@@ -522,7 +527,7 @@ export default function CakeBakerLanding() {
 									</Button>
 								</form>
 							</div>
-							<div className='fade-in flex flex-col h-full'>
+							<div className='flex flex-col h-full'>
 								<div className='flex-1 flex flex-col'>
 									<h4 className='text-xl font-semibold mb-2 text-white-800'>
 										Johannesburg & Soweto
