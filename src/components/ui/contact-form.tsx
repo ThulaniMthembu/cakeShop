@@ -45,7 +45,7 @@ export default function ContactForm() {
       from_email: email,
       phone: phone,
       message: message,
-      to_email: "amazin'glazingcakeshomeoffreshbakes@gmail.com"
+      to_email: "amazinglazincakes110@gmail.com"
     }
 
     try {
