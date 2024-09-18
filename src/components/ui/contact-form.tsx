@@ -40,19 +40,35 @@ export default function ContactForm() {
 
     setIsSubmitting(true)
 
-    const templateParams = {
+    const ownerTemplateParams = {
       from_name: name,
       from_email: email,
       phone: phone,
       message: message,
-      to_email: "amazinglazincakes110@gmail.com"
+      reply_to: email
+    }
+
+    const userTemplateParams = {
+      to_name: name,
+      to_email: email,
+      message: message,
+      reply_to: 'amazinglazincakes110@gmail.com' 
     }
 
     try {
+      // Send email to owner
       await emailjs.send(
         'service_6z0f8ph',
-        'template_xbj7l3o',
-        templateParams,
+        'template_o1jd2aw',
+        ownerTemplateParams,
+        'TxaKxRzq0mrK23sKz'
+      )
+
+      // Send email to user
+      await emailjs.send(
+        'service_6z0f8ph',
+        'template_xbj7l3o', 
+        userTemplateParams,
         'TxaKxRzq0mrK23sKz'
       )
 
